@@ -21,11 +21,15 @@ const user = {
 // 🚨 Create your server
 
 const server = setupServer(
-  rest.get('https://uzgiamkrbapxufnwdrja.supabase.co', (req, res, ctx) => res(ctx.json(user)))
+  rest.get('https://uzgiamkrbapxufnwdrja.supabase.co', (req, res, ctx) => res(ctx.json(user))),
+
+  rest.get('https://uzgiamkrbapxufnwdrja.supabase.co/rest/v1/user', (req, res, ctx) => {
+    return res(ctx.json({ name: 'Sasuke 🌬️🔥' }))
+  })
 )
 
 beforeAll(() => server.listen())
-afterEach(() => server.resetHandlers())
+// afterEach(() => server.resetHandlers())
 
 afterAll(() => server.close())
 
