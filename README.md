@@ -52,5 +52,3 @@ You will need to create a new `users` table in supabase with fields for:
 - likes (this field requires the array option in supabase)
 - motto
 - color
-
-These fields are currently required for display with no code changes. Feel free to add any more fields you desire, and make the required code changes to display the field.
